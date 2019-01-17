@@ -1,8 +1,15 @@
 var katzDeliLine = [];
+var counter = 0;
 
-function takeANumber (arr, name) {
-  arr.push(name);
-  return("Welcome, " + name + ". You are number " + (arr.length) + " in line.");
+// function takeANumber (arr, name) {
+//   arr.push(name);
+//   return `Welcome, ${name}. You are number ${arr.length} in line.`;
+// }
+
+function takeANumber (arr) {
+  counter ++;
+  arr.push(counter);
+  return `Welcome, you are number ${counter}.`;
 }
 
 function nowServing (arr) {
@@ -11,7 +18,7 @@ function nowServing (arr) {
   } else {
     var current = arr[0];
     arr.shift();
-    return "Currently serving " + current + ".";
+    return `Currently serving ${current}.`;
   }
 }
 
